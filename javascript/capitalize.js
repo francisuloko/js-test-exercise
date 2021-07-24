@@ -1,9 +1,13 @@
 function capitalize(string) {
     let str = string;
-    if(str !== ''){
-      return str[0].toUpperCase() + str.slice(1);
+    if(typeof(str) === 'string' && typeof(+str[0] !== 'number')){
+      if(str !== ''){
+        return str[0].toUpperCase() + str.slice(1);
+      } else {
+        return 'String can\'t be empty';
+      }
     } else {
-      return 'String can\'t be empty';
+      return 'Input must be a string'
     }
 }
 
