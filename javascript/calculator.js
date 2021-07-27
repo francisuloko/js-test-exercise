@@ -1,18 +1,16 @@
 class Calculator {
     add(a, b){
-        if(typeof(a) == 'number' && typeof(b) === 'number'){
-          if(a&&b){
-            return a + b
-          } else if (a||b) {
-            return (a || b ? a : b);
-          }
+        if(typeof(a) == 'number' &&
+        typeof(b) === 'number') {  
+          return a + b
       } else {
           return "Enter valid input";
       }
     }
 
     subtract(a, b){
-        if(typeof(a) == 'number' && typeof(b) === 'number'){
+        if(typeof(a) == 'number' &&
+        typeof(b) === 'number') {
             return a - b
         } else {
             return "Enter valid input";
@@ -20,10 +18,11 @@ class Calculator {
     }
 
     divide(a, b){
-        if(typeof(a) == 'number' && typeof(b) === 'number'){
+        if(typeof(a) == 'number' &&
+        typeof(b) === 'number') {
             if(a&&b){
               return a / b
-            } else if (a||b) {
+            } else {
               return a ? 'infinity' : 0;
             }
         } else {
@@ -32,7 +31,8 @@ class Calculator {
     }
 
     mulitiply(a, b){
-        if(typeof(a) == 'number' && typeof(b) === 'number'){
+        if(typeof(a) == 'number' &&
+        typeof(b) === 'number') {
             if(a&&b){
               return a * b
             } else {
@@ -44,4 +44,6 @@ class Calculator {
     }
 }
 
+const calc = new Calculator();
+console.log(calc.mulitiply(10, 4));
 module.exports = Calculator

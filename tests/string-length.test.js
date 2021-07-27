@@ -1,19 +1,19 @@
 const str = require('../javascript/string-length')
 
-describe("String", () => {
+describe("String Length Function", () => {
     const validStr  = str('success')
     const longStr = str('Mississippi');
     const emptyStr = str('');
 
-    test('is valid', () => {
+    test('input is 1-10 characters long', () => {
         expect(validStr).toEqual(7);
     });
 
-    test('is empty', () => {
+    test('input is not empty', () => {
         expect(emptyStr).toEqual('String can\'t be blank');
     });
 
-    test('is not valid', () => {
+    test('input is not more than 10 characters', () => {
         expect(longStr).toEqual('String is too long');
     });
 });
